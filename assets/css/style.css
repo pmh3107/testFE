@@ -15,6 +15,7 @@
   --Color-Gray-2: #616161;
   --Color-Gray-3: #898989;
   --Color-White: #FFF;
+  --Color-Gray-5: #D8D8D8;
 }
 
 html {
@@ -158,6 +159,7 @@ button {
 .banner {
   display: flex;
   justify-content: center;
+  padding-bottom: 66px;
 }
 
 .banner__inner {
@@ -202,6 +204,42 @@ button {
 
 .banner__btn--icon:hover {
   color: var(--Color-White);
+}
+
+.banner-indicator {
+  position: relative;
+  bottom: 29px;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-indicator__item {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--Color-Gray-5);
+}
+
+.active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid var(--Color-Primary);
+  background-color: transparent;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: var(--Color-Primary);
 }
 
 .banner__item {
@@ -293,4 +331,33 @@ button {
   font-weight: 600;
   line-height: 1.5;
   color: var(--Color-Gray-1);
+}
+
+.feature {
+  margin: 73px 0 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 92px;
+}
+
+.feature__item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.feature__heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--Color-Gray-1);
+}
+
+.feature__desc {
+  margin-top: 2px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--Color-Gray-3);
 }
