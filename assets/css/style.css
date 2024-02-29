@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("/assets/fonts/Gilroy-ExtraBold.otf") format("otf"),
+    url("/assets/fonts/Gilroy-Light.otf") format("otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primay-backgroud: #fcf8f3;
+  --Color-Gray-1: #3a3a3a;
+  --Color-Gray-2: #616161;
+  --Color-White: #FFF;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Gilroy, sans-serif;
+}
+
+/* common */
+.container {
+  width: 1440px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/* Header */
+.header {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--primay-backgroud);
+}
+
+.header__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 64.5%;
+  height: 100vh;
+  background: #F9F1E7;
+}
+
+.top-header {
+  position: relative;
+  z-index: 1;
+  padding: 29px 50px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  padding: 8px 41px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  max-width: 336px;
+  margin-right: 43px;
+}
+
+.navbar_list {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 40px;
+}
+
+.navbar__link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--Color-Gray-1);
+}
+
+.navbar__icon {
+  margin-top: 5px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 121px;
+  width: 473px;
+  height: 45px;
+  background: var(--Color-White);
+}
+
+.search__icon {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.search__input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--Color-Gray-2);
+  outline: none;
+}
+
+.top-act {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.top-act__user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.top-act__avatar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
