@@ -38,10 +38,12 @@ body {
   margin: 0 auto;
 }
 
-.container__home {
-  width: 1440px;
-  max-width: calc(100% - 259px);
-  margin: 0 auto;
+.heading_2 {
+  color: var(--Color-Gray-1);
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 a {
@@ -71,6 +73,17 @@ button {
   background-color: var(--Color-Gray-5);
 }
 
+.primary__btn {
+  background-color: var(--Color-White);
+  color: var(--Color-Primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.primary__btn:hover {
+  background-color: var(--Color-Primary);
+  color: var(--Color-White);
+}
+
 .active {
   position: relative;
   display: flex;
@@ -80,6 +93,24 @@ button {
   height: 27px;
   border: 1px solid var(--Color-Primary);
   background-color: transparent;
+}
+
+.scroll__btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(232, 159, 113, 0.3);
+  transition: all .3s ease;
+  color: var(--Color-Primary)
+}
+
+.scroll__btn:hover {
+  background-color: var(--Color-Primary);
+  color: var(--Color-White);
 }
 
 /* Header */
@@ -207,18 +238,6 @@ button {
   height: 624px;
 }
 
-.banner__btn {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: rgba(232, 159, 113, 0.3);
-  transition: all .3s ease;
-}
-
 .banner__btn--left {
   margin-left: 14px;
   top: 50%;
@@ -228,19 +247,6 @@ button {
   right: 0px;
   top: 50%;
   margin-right: 14px;
-}
-
-.banner__btn--icon {
-  color: var(--Color-Primary);
-  transition: all .3s ease;
-}
-
-.banner__btn:hover {
-  background-color: var(--Color-Primary);
-}
-
-.banner__btn:hover .banner__btn--icon {
-  color: var(--Color-White);
 }
 
 .active::after {
@@ -293,11 +299,10 @@ button {
   margin-top: 48px;
   width: 374px;
   height: 78px;
-  background: var(--Color-Primary);
-  color: var(--Color-White);
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.5;
+  background-color: rgba(232, 159, 113, 0.3);
 }
 
 .banner-price {
@@ -345,9 +350,9 @@ button {
 
 /* feature */
 .feature {
-  margin: 72px 0 88px;
+  margin: 72px 102px 88px;
   display: flex;
-  justify-content: space-between;
+  gap: 92px;
 }
 
 .feature__item {
@@ -375,19 +380,17 @@ button {
 }
 
 /* products */
+.products {
+  margin: 0 102px;
+}
 
 .products__heading {
   margin-bottom: 32px;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--Color-Gray-1);
 }
 
 .product__list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
 
@@ -395,7 +398,6 @@ button {
   position: relative;
   width: 285px;
   height: 446px;
-
 }
 
 .product-card__actions {
@@ -529,4 +531,202 @@ button {
 .product__btn:hover {
   background: var(--Color-Primary);
   color: var(--Color-White);
+}
+
+/* Inspirations */
+.inspira {
+  padding: 0 173px;
+  height: 670px;
+  background-color: var(--primay-backgroud);
+}
+
+.inspira__inner {
+  padding-top: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 167px;
+}
+
+.inspira__content {
+  width: 446px;
+}
+
+.inspira__heading {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--Color-Gray-1);
+}
+
+.inspira__desc {
+  margin-top: 8px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--Color-Gray-2);
+}
+
+.inspira__btn {
+  margin-top: 24px;
+  width: 176px;
+  height: 48px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.inspira__media {
+  position: relative;
+  width: 480px;
+  height: 582px;
+}
+
+.inspira__media--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inspira__tag {
+  position: absolute;
+  bottom: 24px;
+  left: 28.5px;
+  padding-left: 38px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 257.822px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(1.5px);
+}
+
+.inspira__tag--title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inspira__tag--desc {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--Color-Gray-2);
+}
+
+.inspira__tag--vector {
+  display: block;
+  width: 27px;
+  height: 1px;
+  background-color: var(--Color-Gray-2, #616161);
+}
+
+.inspira__tag--heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--Color-Gray-1);
+}
+
+.inspira__media--btn {
+  position: absolute;
+  bottom: 24px;
+  right: 136px;
+  width: 57.03px;
+  height: 48px;
+  background-color: var(--Color-Primary);
+  color: var(--Color-White);
+  transition: all 0.3s ease-in-out;
+}
+
+.inspira__media--btn:hover {
+  background-color: var(--Color-White);
+  color: var(--Color-Primary);
+}
+
+/* Tips and Tricks */
+.tip {
+  margin: 0 102px;
+}
+
+.tip__heading {
+  margin: 44px 0 32px;
+}
+
+.tip__inner {
+  position: relative;
+  padding-bottom: 44px;
+}
+
+.tip__btn--left {
+  left: -24px;
+  color: var(--Color-Primary);
+  background-color: var(--Color-White);
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.tip__btn--right {
+  right: -24px;
+  color: var(--Color-Primary);
+  background-color: var(--Color-White);
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.tip__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 32px;
+}
+
+.tip-card {
+  min-width: 391px;
+  height: 370px;
+}
+
+.tip-card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card__thumb--img {
+  width: 100%;
+  height: 251px;
+  object-fit: cover;
+}
+
+.tip-card__content {
+  padding: 16px;
+  width: 100%;
+  height: 119px;
+  background: var(--Color-White);
+}
+
+.tip-card__heading {
+  margin-bottom: 8px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--Color-Gray-1);
+}
+
+.tip-card__time {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--Color-Gray-3);
+}
+
+.tip__actions {
+  margin: 44px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tip__indicator {
+  bottom: 0;
+  left: 0;
 }
