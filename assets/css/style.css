@@ -112,7 +112,8 @@ button {
   border-radius: 50%;
   background-color: rgba(232, 159, 113, 0.3);
   transition: all .3s ease;
-  color: var(--Color-Primary)
+  color: var(--Color-Primary);
+  z-index: 10;
 }
 
 .scroll__btn:hover {
@@ -239,7 +240,7 @@ button {
   margin: 0 auto;
   position: relative;
   height: 624px;
-  width: 1339px;
+  max-width: 1339px;
 }
 
 .banner__btn--left {
@@ -262,10 +263,32 @@ button {
   background-color: var(--Color-Primary);
 }
 
-.banner__item {
+.banner__list {
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+.banner__item {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  /* transform: translateX(-100%); */
+}
+
+.banner__item.hide {
+  transform: translateX(0);
+}
+
+.banner__item.show {
+  transform: translateX(-100%);
+}
+
+.banner__img {
+  max-width: 1339px;
+  height: 624px;
+  object-fit: cover;
 }
 
 .banner-tag {
@@ -283,7 +306,7 @@ button {
 }
 
 .banner-tag__heading {
-  width: 374px;
+  width: 380px;
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 1.2;
@@ -306,7 +329,12 @@ button {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.5;
-  background-color: rgba(232, 159, 113, 0.3);
+  background-color: var(--Color-Primary);
+  color: var(--Color-White);
+}
+
+.banner-tag__btn:hover {
+  opacity: 0.5;
 }
 
 .banner-price {
@@ -540,7 +568,7 @@ button {
 /* Inspirations */
 .inspira {
   padding: 0 173px;
-  height: 670px;
+  min-height: 670px;
   background-color: var(--primay-backgroud);
 }
 
@@ -685,7 +713,7 @@ button {
 }
 
 .tip-card {
-  min-width: 391px;
+  width: 391px;
   height: 370px;
 }
 
@@ -846,8 +874,7 @@ button {
 .footer__row {
   display: grid;
   grid-template-columns: repeat(5, auto);
-  ;
-  gap: 80px;
+  gap: 70px
 }
 
 .footer__col {

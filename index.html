@@ -7,6 +7,10 @@
   <!-- Link css -->
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <!-- Link JS -->
+  <script src="./assets/js/script.js" type="text/javascript"></script>
+
   <!-- Title -->
   <title>Funiro. | Home page</title>
 </head>
@@ -15,9 +19,11 @@
   <!-- Header  -->
   <header class="header">
     <div class="container">
-
       <!-- Top header -->
       <div class="top-header">
+        <button id="toggleNavButton" class="navbar-toggle__button">
+          <img src="./assets/images/Icon/Toogle.svg" alt="" class="navbar-toggle__icon">
+        </button>
         <a href="#!" class="logo">
           <img src="./assets/images/Icon/Funiro..svg" alt="Funito." class="logo__icon" />
         </a>
@@ -61,6 +67,39 @@
         </div>
       </div>
   </header>
+  <!-- Table & Mobile header -->
+  <header class="mobile-header">
+    <div id="overlay" class="menu-overlay"></div>
+    <div id="drawer" class="menu-drawer">
+      <!-- Search -->
+      <div class="search-mobile">
+        <img src="./assets/images/Icon/Search.svg" alt="" class="search__icon" />
+        <input type="text" class="search-mobile__input" placeholder="Search for minimalist chair" />
+      </div>
+      <!-- Navbar -->
+      <nav class="navbar-mobile">
+        <ul class="navbar-mobile__list">
+          <h2 class="heading_2">Menu</h2>
+          <li class="navbar_item">
+            <a href="#!" class="navbar-mobile__link">Products</a>
+            <button class="navbar_btn btn">
+              <img src="./assets/images/Icon/Arrow-down.svg" alt="" class="navbar__icon" />
+            </button>
+          </li>
+          <li class="navbar_item">
+            <a href="#!" class="navbar-mobile__link">Rooms</a>
+            <button class="navbar_btn btn">
+              <img src="./assets/images/Icon/Arrow-down.svg" alt="" class="navbar__icon" />
+            </button>
+          </li>
+          <li class="navbar_item">
+            <a href="#!" class="navbar-mobile__link">Inspirations</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
   <!-- Main -->
   <main class="main">
     <div class="home__background"></div>
@@ -68,35 +107,37 @@
     <div class="banner">
       <div class="container">
         <div class="banner__inner">
-          <button class="scroll__btn banner__btn--left">
+          <button id="banner__left" class="scroll__btn banner__btn--left">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
               <path d="M14.9999 5.07227L7.99994 11.6407L14.9999 18.2091" stroke="CurrentColor" stroke-width="1.8"
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
-          <button class="scroll__btn banner__btn--right">
+          <button id="banner__right" class="scroll__btn banner__btn--right">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
               <path d="M9.00006 4.9519L16.0001 11.5203L9.00006 18.0887" stroke="CurrentColor" stroke-width="1.8"
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
-          <div class="banner__item">
-            <a href="#!" class="banner__link">
-              <picture>
-                <img src="./assets/images/image/banner_1.png" alt="" class="banner__img">
-              </picture>
-            </a>
-            <a href="#!" class="banner__link">
-              <picture>
-                <img src="./assets/images/image/banner_2.png" alt="" class="banner__img">
-              </picture>
-            </a>
+          <div class="banner__list">
+            <div class="banner__item">
+              <img src="./assets/images/image/banner_1.png" alt="" class="banner__img">
+            </div>
+            <div class="banner__item">
+              <img src="./assets/images/image/banner_2.png" alt="" class="banner__img">
+            </div>
+            <div class="banner__item">
+              <img src="./assets/images/image/banner_1.png" alt="" class="banner__img">
+            </div>
+            <div class="banner__item">
+              <img src="./assets/images/image/banner_2.png" alt="" class="banner__img">
+            </div>
           </div>
-          <div class="indicator">
-            <div class="indicator__item active"></div>
-            <div class="indicator__item"></div>
-            <div class="indicator__item"></div>
-            <div class="indicator__item"></div>
+          <div id="indicator-banner" class="indicator">
+            <div class="indicator-banner__item indicator__item active"></div>
+            <div class="indicator-banner__item indicator__item"></div>
+            <div class="indicator-banner__item indicator__item"></div>
+            <div class="indicator-banner__item indicator__item"></div>
           </div>
           <!-- banner tag -->
           <div class="banner-tag">
