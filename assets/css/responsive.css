@@ -369,6 +369,17 @@
         left: 42%;
     }
 
+    .product-card {
+        width: 302px;
+    }
+
+    .share__img:nth-child(4) {
+        right: 470px;
+    }
+
+    .tip__indicator {
+        left: auto;
+    }
 }
 
 /* Mobile */
@@ -387,10 +398,6 @@
 
     .top-act__btn {
         display: none;
-    }
-
-    .banner-price {
-        /* display: none; */
     }
 
     .banner__inner {
