@@ -285,8 +285,9 @@
         margin: 0;
     }
 
-    .tip__list {
+    .tip__item {
         flex-direction: column;
+        align-items: center;
     }
 
     .tip-card {
@@ -504,7 +505,7 @@
     }
 
     .share__img:nth-child(3) {
-        left: 250px;
+        left: 209px;
     }
 
     .footer__row {

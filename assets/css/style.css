@@ -167,6 +167,10 @@ button {
   color: var(--Color-Gray-1);
 }
 
+.navbar_item:hover {
+  border-bottom: 2px solid var(--Color-Gray-1);
+}
+
 .navbar__icon {
   margin-top: 5px;
 }
@@ -345,6 +349,7 @@ button {
   height: 138.875px;
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(15.5px);
+  cursor: pointer;
 }
 
 .banner-price__inner {
@@ -378,6 +383,14 @@ button {
   font-weight: 600;
   line-height: 1.5;
   color: var(--Color-Gray-1);
+}
+
+.banner-price__vector {
+  transition: all 0.3s ease;
+}
+
+.banner-price__vector:hover {
+  transform: scale(1.5);
 }
 
 /* feature */
@@ -462,6 +475,10 @@ button {
   color: var(--Color-Primary, #E89F71);
 }
 
+.product-card__btn:hover {
+  opacity: 0.7;
+}
+
 .product-card__interact {
   margin-top: 24px;
   display: flex;
@@ -477,6 +494,14 @@ button {
   font-weight: 600;
   line-height: 1.5;
   color: var(--Color-White);
+}
+
+.heart-icon {
+  color: white;
+}
+
+.clicked {
+  color: red;
 }
 
 .product-card__thumb {
@@ -707,9 +732,16 @@ button {
 .tip__list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
 
+.tip__item {
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
   gap: 32px;
+  /* transform: translateX(-100%); */
 }
 
 .tip-card {
